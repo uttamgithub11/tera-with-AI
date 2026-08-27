@@ -1,0 +1,57 @@
+**Summary of infrastructure**
+
+This Terraform plan creates a basic AWS VPC infrastructure for a web server application. The infrastructure consists of:
+
+* An Elastic IP (EIP) is not created, instead, a default public subnet is created to map to an EIP.
+* A public VPC with the IP range 10.10.0.0/16.
+* A default security group for outgoing traffic.
+* A default route table with a rule to route all traffic to the Internet Gateway.
+* A public subnet with an EIP mapped to it.
+* An Internet Gateway.
+
+**Resources that will be created**
+
+1. `aws_internet_gateway.igw`: Creates an internet gateway to route all traffic to the Internet.
+2. `aws_route_table.public_rt`: Creates a public route table to route all traffic to the Internet Gateway.
+3. `aws_route_table_association.public_assoc`: Creates a route table association between the public route table and the public subnet.
+4. `aws_subnet.public`: Creates a public subnet with an EIP mapped to it.
+5. `aws_vpc.main`: Creates a public VPC with the IP range 10.10.0.0/16.
+
+**Security risks**
+
+1. **No NACLs**: There are no network access control lists (NACLs) defined for the VPC. This can lead to unauthorized access to resources in the VPC.
+2. **Missing IAM roles or policies**: No IAM roles or policies are defined for the security group. This can lead to unauthorized access to the security group.
+3. **No encryption**: There is no encryption defined for the VPC or security group. This can lead to unauthorized access to data in the VPC.
+
+**Cost risks**
+
+1. **No cost optimization**: There are no cost optimization strategies defined for the VPC or security group. This can lead to unnecessary costs for the VPC or security group.
+
+**Best-practice issues**
+
+1. **Missing a key pair**: There is no key pair defined for the security group. This can lead to unauthorized access to the security group.
+2. **No network access control lists (NACLs)**: There are no NACLs defined for the VPC. This can lead to unauthorized access to resources in the VPC.
+3. **No security group policies**: There are no security group policies defined for the security group. This can lead to unauthorized access to the security group.
+
+**Recommended fixes**
+
+1. Add NACLs to the VPC to control network access.
+2. Define IAM roles or policies for the security group to control access.
+3. Add encryption to the VPC and security group to protect data.
+4. Define cost optimization strategies for the VPC and security group.
+
+**Beginner-friendly explanation**
+
+This Terraform plan creates a basic AWS VPC infrastructure for a web server application. However, there are some security and cost risks associated with this infrastructure.
+
+To secure the infrastructure, we need to:
+
+* Add NACLs to the VPC to control network access.
+* Define IAM roles or policies for the security group to control access.
+* Add encryption to the VPC and security group to protect data.
+
+To optimize the infrastructure for cost, we need to:
+
+* Define cost optimization strategies for the VPC and security group.
+
+By following these recommendations, we can create a secure and cost-effective infrastructure for our web server application.

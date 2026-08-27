@@ -11,12 +11,12 @@ Terraform will perform the following actions:
       + id       = (known after apply)
       + owner_id = (known after apply)
       + tags     = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-igw"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-igw"
         }
       + tags_all = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-igw"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-igw"
         }
       + vpc_id   = (known after apply)
     }
@@ -35,12 +35,12 @@ Terraform will perform the following actions:
             },
         ]
       + tags             = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-public-rt"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-public-rt"
         }
       + tags_all         = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-public-rt"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-public-rt"
         }
       + vpc_id           = (known after apply)
     }
@@ -88,7 +88,7 @@ Terraform will perform the following actions:
             },
           + {
               + cidr_blocks      = [
-                  + "0.0.0.0/0",
+                  + "13.203.212.235/32",
                 ]
               + description      = "SSH access"
               + from_port        = 22
@@ -100,17 +100,17 @@ Terraform will perform the following actions:
               + to_port          = 22
             },
         ]
-      + name                   = "terraform-ai-demo-sg"
+      + name                   = "terraform-ai-prod-sg"
       + name_prefix            = (known after apply)
       + owner_id               = (known after apply)
       + revoke_rules_on_delete = false
       + tags                   = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-sg"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-sg"
         }
       + tags_all               = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-sg"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-sg"
         }
       + vpc_id                 = (known after apply)
     }
@@ -132,12 +132,12 @@ Terraform will perform the following actions:
       + owner_id                                       = (known after apply)
       + private_dns_hostname_type_on_launch            = (known after apply)
       + tags                                           = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-public-subnet"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-public-subnet"
         }
       + tags_all                                       = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-public-subnet"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-public-subnet"
         }
       + vpc_id                                         = (known after apply)
     }
@@ -161,12 +161,12 @@ Terraform will perform the following actions:
       + main_route_table_id                  = (known after apply)
       + owner_id                             = (known after apply)
       + tags                                 = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-vpc"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-vpc"
         }
       + tags_all                             = {
-          + "Environment" = "dev"
-          + "Name"        = "terraform-ai-demo-vpc"
+          + "Environment" = "prod"
+          + "Name"        = "terraform-ai-prod-vpc"
         }
     }
 

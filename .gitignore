@@ -1,0 +1,10 @@
+
+.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
+tfplan.txt
+ai-report.txt
+.env
+actions-runner
+ai
